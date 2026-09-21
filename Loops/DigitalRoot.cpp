@@ -13,7 +13,7 @@ Constraints:
 1 ≤ n ≤ 107
 
 */
-
+ 
 
 class Solution {
   public:
