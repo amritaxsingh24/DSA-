@@ -5,7 +5,7 @@ Given two positive integer n and  k, check if the kth index bit of n is set or n
 Examples : 
 
 Input: n = 4, k = 0
-Output: false
+Output: false 
 Explanation: Binary representation of 4 is 100, in which 0th index bit from LSB is not set. So, return false.
 Input: n = 4, k = 2
 Output: true
