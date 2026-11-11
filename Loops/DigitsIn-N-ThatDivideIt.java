@@ -26,24 +26,30 @@ Auxiliary Space: O(1)
 
 
 class Solution {
-public:
-    int divisibleByDigits(string& s) {
-        int rem[10] = {}, ans = 0;
+    public int divisibleByDigits(String s) {
+        
+        int[] rem = new int[10];
+        
+        for (int i = 0; i < s.length(); i++) {
 
-        for (char ch : s) {
-            int x = ch - '0';
+            int digit = s.charAt(i) - '0';
 
-            for (int d = 1; d <= 9; d++)
-                rem[d] = (rem[d] * 10 + x) % d;
+            for (int d = 1; d <= 9; d++) {
+                rem[d] = (rem[d] * 10 + digit) % d;
+            }
+        }
+        
+        int count = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+
+            int digit = s.charAt(i) - '0';
+
+            if (digit != 0 && rem[digit] == 0) {
+                count++;
+            }
         }
 
-        for (char ch : s) {
-            int d = ch - '0';
-
-            if (d && rem[d] == 0)
-                ans++;
-        }
-
-        return ans;
+        return count;
     }
-};
+}
