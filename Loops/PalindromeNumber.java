@@ -29,18 +29,20 @@ Constraints:
 
 class Solution {
     public boolean isPalindrome(int x) {
-        if((x <0) || ((x != 0) && (x % 10 == 10))){
-            return false;
+        int original = x;
+        int rev = 0;
+        while(original > 0){
+            int digit = original % 10;
+            original /= 10;
+            rev = rev * 10 + digit;
+
         }
-        int orginal = x;
-        int p = 0;
-        while(x>0){
-            int d = x%10;
-            p = p * 10 + d;
-            x/= 10;
+        if(x == rev){
+            return true;
         }
-        return(p == orginal);
-        
+        else{
+        return false;
+        }
     }
 }
 
