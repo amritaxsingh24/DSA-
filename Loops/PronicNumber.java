@@ -20,13 +20,13 @@ Constraints:
 
 
 class Solution {
-  public:
-    vector<int> pronicNumbers(int n) {
-        vector<int> ans;
-
-        for(int i = 0; i * (i + 1) <= n; i++) {
-            ans.push_back(i * (i + 1));
+    public ArrayList<Integer> pronicNumbers(int n) {
+        ArrayList<Integer> ans = new ArrayList<>();
+        int count = 0;
+       for(int i = 0; i * (i + 1) <= n; i++){
+           count = i * (i +1);
+           ans.add(count);
         }
-        return ans;
+       return ans;
     }
-};
+}
