@@ -14,23 +14,20 @@ Input: n = 1
 Output: false
 Explanation: 1 has only one divisor (1 itself), which is not sufficient for it to be considered prime.
 Constraints:
+
 1 ≤ n ≤ 109
+
 */
 
 
 class Solution {
-  public:
-    bool isPrime(int n) {
-        
-      if (n <= 1) {
-            return false;
-        }
-        
-        for (int i = 2; i * i <= n; i++) {
-            if (n % i == 0) {
-                return false;
+    static boolean isPrime(int n) {
+        int count = 0;
+        for(int i = 1; i <= n; i++){
+            if(n % i == 0){
+                count++;
             }
         }
-        return true;
+        return(count == 2);
     }
-};
+}
