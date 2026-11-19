@@ -17,27 +17,29 @@ Explanation:
 6 is the factorial of 3, i.e. 3! = 1 × 2 × 3 = 6
 24 is the factorial of 4, i.e. 4! = 1 × 2 × 3 × 4 = 24
 Constraints:
-1 ≤ n ≤ 105
+
+1 ≤ arr.size() ≤ 105
 1 ≤ arr[i] ≤ 109
 */
 
 
 class Solution {
-  public:
-    vector<int> factorialNumbers(vector<int>& arr) {
-        vector<int> ans;
-
-        for(int x : arr) {
-            long long f = 1;
-
-            for(int i = 1; f < x; i++)
-                f *= i;
-
-            if(f == x)
-                ans.push_back(x);
-        }
-
-        return ans;
+    public List<Integer> factorialNumbers(List<Integer> arr) {
+        List<Integer> ans = new ArrayList<>();
+        for(int i = 0; i < arr.size(); i++){
+            int num = arr.get(i);
+            long fact = 1;
+            int j = 1;
+            
+            while(fact < num){
+                fact *= j;
+                j++;
+            }
         
+            if(fact == num){
+                ans.add(num);
+            }
+        }
+        return ans;
     }
-};
+}
