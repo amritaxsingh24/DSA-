@@ -7,7 +7,7 @@ Examples :
 
 Input: arr[] = [2, 1, 5, 9]
 Output: [2, 1]
-Explanation: 
+Explanation:  
 2 is the factorial of 2, i.e. 2! = 1 * 2 = 2
 1 is the factorial of 1, i.e. 1! = 1
 Input: arr[] = [2, 5, 3, 6, 9, 12, 24]
